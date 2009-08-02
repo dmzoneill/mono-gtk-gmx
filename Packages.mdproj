@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ItemType>PackagingProject</ItemType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{285EAE7E-55DD-4002-968D-4E199D0BF39C}</ProjectGuid>
+    <Packages>
+      <Packages>
+        <Package name="Mono Makefile Sources">
+          <Builder targetFile="GmX-.tar.gz" format="MonoDevelop.Projects.FileFormat" ctype="SourcesZipPackageBuilder">
+            <ChildEntries>
+              <SolutionItemReference path="GmX\GmX.csproj" />
+            </ChildEntries>
+            <RootEntry path="GmX.sln" id="GmX" />
+          </Builder>
+        </Package>
+        <Package name="Linux Binaries">
+          <Builder targetFile="GmX-linux.tar.gz" platform="Linux" configuration="Debug" ctype="BinariesZipPackageBuilder">
+            <ChildEntries>
+              <SolutionItemReference path="GmX\GmX.csproj" />
+            </ChildEntries>
+            <RootEntry path="GmX.sln" id="GmX" />
+          </Builder>
+        </Package>
+        <Package name="Microsoft Windows Binaries">
+          <Builder targetFile="GmX-windows.tar.gz" platform="Windows" configuration="Debug" ctype="BinariesZipPackageBuilder">
+            <ChildEntries>
+              <SolutionItemReference path="GmX\GmX.csproj" />
+            </ChildEntries>
+            <RootEntry path="GmX.sln" id="GmX" />
+          </Builder>
+        </Package>
+        <Package name="Tarball">
+          <Builder TargetDirectory="/home/dave/Projects/GmX/GmX" DefaultConfiguration="Debug" ctype="TarballDeployTarget">
+            <ChildEntries>
+              <SolutionItemReference path="GmX\GmX.csproj" />
+            </ChildEntries>
+            <RootEntry path="GmX.sln" id="GmX" />
+          </Builder>
+        </Package>
+      </Packages>
+    </Packages>
+  </PropertyGroup>
+</Project>
