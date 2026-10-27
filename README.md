@@ -1,5 +1,9 @@
 # GmX
 
+<p align="center">
+  <img src=".github/logo.png" alt="mono-gtk-gmx logo" width="128" />
+</p>
+
 A Mono GTK# media player for MP3 files.
 
 ## What it does
